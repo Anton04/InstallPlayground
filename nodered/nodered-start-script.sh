@@ -20,7 +20,7 @@
  USERNAME='iot'
  APP_PATH='/home/iot/node-red'
  HISTORY=1024
- INVOCATION="source ~/.nvm/nvm.sh && nvm run 0.8.22 $SERVICE" 
+ INVOCATION="source /home/iot/.nvm/nvm.sh && nvm run 0.8.22 $SERVICE" 
  ME=`whoami`
 
  as_user() {
