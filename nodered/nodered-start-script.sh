@@ -18,9 +18,9 @@
  SERVICE='red.js'
  OPTIONS=''
  USERNAME='iot'
- APP_PATH='/home/iot/node-red'
+ APP_PATH="/home/$USERNAME/node-red"
  HISTORY=1024
- NODE='/home/iot/.nvm/v0.8.22/bin/node'
+ NODE="/home/$USERNAME/.nvm/v0.8.22/bin/node"
  INVOCATION="$NODE $SERVICE" 
  ME=`whoami`
  
