@@ -1,1 +1,10 @@
  #!/bin/bash
+
+SCRIPT='./nodered-start-script.sh'
+CMD='nodered'
+
+sudo mv $SCRIPT /etc/init.d/$CMD
+sudo chmod 755 /etc/init.d/$CMD
+sudo update-rc.d $CMD defaults
+sudo update-rc.d $CMD enable
+
