@@ -20,9 +20,10 @@
  USERNAME='iot'
  APP_PATH='/home/iot/node-red'
  HISTORY=1024
- INVOCATION="source /home/iot/.nvm/nvm.sh && nvm run 0.8.22 $SERVICE" 
+ NODE='/home/iot/.nvm/v0.8.22/bin/node'
+ INVOCATION="$NODE $SERVICE" 
  ME=`whoami`
-
+ 
  as_user() {
    if [ "$ME" = "$USERNAME" ] ; then
      bash -c "$1"
