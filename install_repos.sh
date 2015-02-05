@@ -1,8 +1,8 @@
 #!/bin/bash
 
-adduser iot 
+#sudo adduser iot 
 
-sudo su iot
+#sudo su iot
 
 cd ~
 
