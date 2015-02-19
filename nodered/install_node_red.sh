@@ -21,5 +21,9 @@ ln -s node-red-$red_version node-red
 
 cd node-red 
 
+. ~/.nvm/nvm.sh
+
+nvm use $node_version
+
 npm install --production
 
