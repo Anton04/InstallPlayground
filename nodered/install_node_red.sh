@@ -1,7 +1,7 @@
 #!/bin/bash
 
-node_version='0.8.22'
-red_version='0.10.1'
+node_version='0.12.0'
+red_version='0.10.3'
 
 
 #wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
@@ -13,7 +13,7 @@ red_version='0.10.1'
 
 
 
-wget https://github.com/node-red/node-red/archive/0.9.1.zip
+wget https://github.com/node-red/node-red/archive/$red_version.zip
 unzip $red_version.zip
 rm $red_version.zip
 
