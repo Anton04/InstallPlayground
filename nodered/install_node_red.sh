@@ -28,6 +28,6 @@ nvm use $node_version
 npm install --production
 
 npm install node-red-node-xmpp
-npm install node-red-web-nodes
+npm install node-red-node-web-nodes
 
 
