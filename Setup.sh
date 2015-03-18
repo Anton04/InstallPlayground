@@ -20,6 +20,10 @@ apt-get install mosquitto
 #Install ipython
 apt-get install ipython-notebook
 
+sudo -H -u iot bash -c 'https://raw.githubusercontent.com/Anton04/InstallPlayground/master/nodered/node_install.sh'
 
 #Install nodered
-sudo -H -u iot bash -c 'wget -qO- https://raw.githubusercontent.com/Anton04/InstallPlayground/master/install_repos.sh | bash'
+sudo -H -u iot bash -c 'wget -qO- https://raw.githubusercontent.com/Anton04/InstallPlayground/master/nodered/install_node_red.sh | bash'
+
+#Install startup script for nodered
+wget -qO- https://raw.githubusercontent.com/Anton04/InstallPlayground/master/nodered/install-node-red-start-script | bash
