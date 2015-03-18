@@ -39,14 +39,14 @@ echo " "
 echo " "
 echo " "
 echo "Installing node.js"
-sudo -H -u iot bash -c 'https://raw.githubusercontent.com/Anton04/InstallPlayground/master/nodered/node_install.sh'
+sudo -H -u iot bash -c 'wget -qO- https://raw.githubusercontent.com/Anton04/InstallPlayground/master/nodered/node_install.sh | bash'
 
 #Install nodered
 echo " "
 echo " "
 echo " "
 echo "Installing NodeRED"
-sudo -H -u iot bash -c 'wget -qO- https://raw.githubusercontent.com/Anton04/InstallPlayground/master/nodered/install_node_red.sh | bash'
+sudo -H -u iot bash -c 'cd /home/iot && wget -qO- https://raw.githubusercontent.com/Anton04/InstallPlayground/master/nodered/install_node_red.sh | bash'
 
 #Install startup script for nodered
 wget -qO- https://raw.githubusercontent.com/Anton04/InstallPlayground/master/nodered/install-node-red-start-script | bash
