@@ -1,7 +1,7 @@
 #!/bin/bash
 
-node_version='0.12.0'
-red_version='0.10.3'
+node_version='0.10.9'
+red_version='0.10.4'
 
 
 #wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
@@ -26,4 +26,8 @@ cd node-red
 nvm use $node_version
 
 npm install --production
+
+npm install node-red-node-xmpp
+npm install node-red-web-nodes
+
 
