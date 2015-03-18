@@ -25,9 +25,9 @@ cd node-red
 
 nvm use $node_version
 
-npm install --production
+cd /home/iot/node-red && npm install --production
 
-npm install node-red-node-xmpp
-npm install node-red-node-web-nodes
+cd /home/iot/node-red && npm install node-red-node-xmpp
+cd /home/iot/node-red && npm install node-red-node-web-nodes
 
 
