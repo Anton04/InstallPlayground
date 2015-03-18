@@ -28,6 +28,10 @@ echo " "
 echo "Installing mosquitto"
 apt-get install mosquitto
 
+apt-get install python-pip
+
+pip install mosquitto 
+
 #Install ipython
 echo " "
 echo " "
