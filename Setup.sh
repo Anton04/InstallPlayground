@@ -22,4 +22,4 @@ apt-get install ipython-notebook
 
 
 #Install nodered
-sudo -H -u iot bash -c '
+sudo -H -u iot bash -c 'wget -qO- https://raw.githubusercontent.com/Anton04/InstallPlayground/master/install_repos.sh | bash'
