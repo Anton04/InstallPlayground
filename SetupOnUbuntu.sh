@@ -39,7 +39,7 @@ echo " "
 echo " "
 echo " "
 echo "Installing node.js"
-sudo -H -u iot bash -c 'wget -qO- https://raw.githubusercontent.com/Anton04/InstallPlayground/master/nodered/node_install.sh | bash'
+sudo -H -u iot bash -c 'cd /home/iot && wget -qO- https://raw.githubusercontent.com/Anton04/InstallPlayground/master/nodered/node_install.sh | bash'
 
 #Install nodered
 echo " "
