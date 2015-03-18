@@ -6,7 +6,8 @@ if [ "$(whoami)" != "root" ]; then
 	exit 1
 fi
 
-apt-get update
+echo "Installing git"
+apt-get update > /dev/null
 apt-get install git
 
 echo "Creating IoT user"
