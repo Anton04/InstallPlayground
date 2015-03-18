@@ -5,7 +5,7 @@ apt-get update
 apt-get install git
 
 
-sudo adduser iot 
+adduser iot --disabled-password --gecos "Internet of things services and applications" 
 
 #sudo su iot
 
