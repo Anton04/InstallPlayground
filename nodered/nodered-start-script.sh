@@ -20,7 +20,7 @@
  USERNAME='iot'
  APP_PATH="/home/$USERNAME/node-red"
  HISTORY=1024
- NODE_VERSION="0.10.9"
+ NODE_VERSION="0.10.25"
  NODE="/home/$USERNAME/.nvm/v$NODE_VERSION/bin/node"
  INVOCATION="$NODE $SERVICE" 
  ME=`whoami`
