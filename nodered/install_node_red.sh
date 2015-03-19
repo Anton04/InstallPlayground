@@ -29,5 +29,8 @@ cd /home/iot/node-red && npm install --production
 
 cd /home/iot/node-red && npm install node-red-node-xmpp
 cd /home/iot/node-red && npm install node-red-node-web-nodes
-
+cd /home/iot/node-red && npm install node-red-contrib-googlechart
+cd /home/iot/node-red && npm install node-red-contrib-slack
+cd /home/iot/node-red && npm install node-red-node-suncalc
+cd /home/iot/node-red && npm install node-red-contrib-freeboard
 
