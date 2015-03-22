@@ -18,12 +18,13 @@
  SERVICE='red.js'
  OPTIONS=''
  USERNAME='iot'
- APP_PATH="/home/$USERNAME/node-red"
+ APP_PATH="/home/$USERNAME/services/node-red"
  HISTORY=1024
- NODE_VERSION="0.12.0"
- NODE="/home/$USERNAME/.nvm/versions/node/v$NODE_VERSION/bin/node"
+ NODE_VERSION="0.10.37"
+ NODE="/home/$USERNAME/.nvm/v$NODE_VERSION/bin/node"
  INVOCATION="$NODE $SERVICE" 
  ME=`whoami`
+ SERVICENAME=" ${0##*/} "
  
  as_user() {
    if [ "$ME" = "$USERNAME" ] ; then
@@ -34,15 +35,16 @@
  }
  
  my_start() {
-   if  pgrep -u $USERNAME -f $SERVICE > /dev/null
+   echo "Starting $SERVICENAME"
+   if  pgrep -u $USERNAME -f $SERVICENAME > /dev/null
    then
      echo "$SERVICE is already running!"
    else
      echo "Starting $SERVICE..."
      cd $APP_PATH
-     as_user "cd $APP_PATH && screen -h $HISTORY -dmS nodered $INVOCATION"
+     as_user "cd $APP_PATH && screen -h $HISTORY -dmS $SERVICENAME $INVOCATION"
      sleep 7
-     if pgrep -u $USERNAME -f $SERVICE > /dev/null
+     if pgrep -u $USERNAME -f $SERVICENAME > /dev/null
      then
        echo "$SERVICE is now running."
      else
@@ -53,7 +55,7 @@
  
  
  my_stop() {
-   if pgrep -u $USERNAME -f $SERVICE > /dev/null
+   if pgrep -u $USERNAME -f $SERVICENAME > /dev/null
    then
      echo "Stopping $SERVICE"
      #as_user "screen -p 0 -S nodered -X eval 'stuff \"say SERVER SHUTTING DOWN IN 10 SECONDS. Saving map...\"\015'"
@@ -61,12 +63,12 @@
      ##sleep 10
      ##as_user "screen -p 0 -S minecraft -X eval 'stuff \"stop\"\015'"
      ##sleep 7
-     pkill -u iot -f $SERVICE
+     pkill -u iot -f $SERVICENAME
      sleep 7
    else
-     echo "$SERVICE was not running."
+     echo "$SERVICENAME was not running."
    fi
-   if pgrep -u $USERNAME -f $SERVICE > /dev/null
+   if pgrep -u $USERNAME -f $SERVICENAME > /dev/null
    then
      echo "Error! $SERVICE could not be stopped."
    else
@@ -90,7 +92,7 @@
      my_start
      ;;
    status)
-     if pgrep -u $USERNAME -f $SERVICE > /dev/null
+     if pgrep -u $USERNAME -f $SERVICENAME > /dev/null
      then
        echo "$SERVICE is running."
      else

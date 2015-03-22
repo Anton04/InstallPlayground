@@ -1,7 +1,7 @@
 #!/bin/bash
 
-node_version='0.12.0'
-red_version='0.10.3'
+node_version='0.10.37'
+red_version='0.10.4'
 
 
 #wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
@@ -25,5 +25,12 @@ cd node-red
 
 nvm use $node_version
 
-npm install --production
+cd /home/iot/node-red && npm install --production
+
+cd /home/iot/node-red && npm install node-red-node-xmpp
+cd /home/iot/node-red && npm install node-red-node-web-nodes
+cd /home/iot/node-red && npm install node-red-contrib-googlechart
+cd /home/iot/node-red && npm install node-red-contrib-slack
+cd /home/iot/node-red && npm install node-red-node-suncalc
+cd /home/iot/node-red && npm install node-red-contrib-freeboard
 

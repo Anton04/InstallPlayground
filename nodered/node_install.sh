@@ -1,5 +1,5 @@
 #!/bin/bash
-node_version='0.12.0'
+node_version='0.10.9'
 
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
 
