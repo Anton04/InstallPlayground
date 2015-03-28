@@ -34,3 +34,12 @@ cd /home/iot/node-red && npm install node-red-contrib-slack
 cd /home/iot/node-red && npm install node-red-node-suncalc
 cd /home/iot/node-red && npm install node-red-contrib-freeboard
 
+
+
+
+#Set up directory for saving flows 
+mkdir /home/iot/flows
+cp /home/iot/repos/InstallPlayground/nodered/lib/ /home/iot/flows/lib/ -r
+
+
+
