@@ -16,15 +16,26 @@
  
  #Settings
  SERVICE='red.js'
- OPTIONS=''
- USERNAME='iot'
- APP_PATH="/home/$USERNAME/node-red"
- HISTORY=1024
- NODE_VERSION="0.10.37"
- NODE="/home/$USERNAME/.nvm/v$NODE_VERSION/bin/node"
- INVOCATION="$NODE $SERVICE" 
- ME=`whoami`
- SERVICENAME=" ${0##*/} "
+
+
+#Check the amount of memory awalible
+MEMORY=`cat /proc/meminfo | grep MemTotal | awk '{ print $2 }'`
+LIMIT=350000
+OPTIONS=''
+
+if [ `cat /proc/meminfo |grep MemTotal | awk '{ print $2 }'` -lt $LIMIT ]
+        then
+	OPTIONS=' --max-old-space-size=128'
+fi
+
+USERNAME='iot'
+APP_PATH="/home/$USERNAME/node-red"
+HISTORY=1024
+NODE_VERSION="0.10.37"
+NODE="/home/$USERNAME/.nvm/v$NODE_VERSION/bin/node"
+INVOCATION="$NODE $OPTIONS $SERVICE" 
+ME=`whoami`
+SERVICENAME=" ${0##*/} "
  
  as_user() {
    if [ "$ME" = "$USERNAME" ] ; then
