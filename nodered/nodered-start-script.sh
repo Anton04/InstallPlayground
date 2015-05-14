@@ -1,6 +1,6 @@
 #!/bin/bash
 # /etc/init.d/nodered
-# version 0.3.9 2014-10-25 (YYYY-MM-DD)
+# version 3 2015-05-10 (YYYY-MM-DD)
  
 ### BEGIN INIT INFO
 # Provides:   nodered
