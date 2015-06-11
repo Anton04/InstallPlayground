@@ -5,7 +5,7 @@ node_version='0.10.37'
 
 
 #Install node version manager
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash
 
 . ~/.nvm/nvm.sh
 
