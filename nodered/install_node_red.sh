@@ -17,7 +17,7 @@ nvm use $node_version
 #Install node red
 npm install node-red
 
-NODE_RED_PATH = $HOME/node_modules/node-red
+NODE_RED_PATH=$HOME/node_modules/node-red
 
 ln -s $NODE_RED_PATH node-red
 
