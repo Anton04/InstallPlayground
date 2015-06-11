@@ -21,6 +21,14 @@ adduser iot --disabled-password --gecos "Internet of things services and applica
 sudo -H -u iot bash -c 'mkdir repos'
 #sudo -H -u iot bash -c 'cd repos && git clone https://github.com/Anton04/InstallPlayground.git'
 
+
+#Install screen
+echo " "
+echo " "
+echo " "
+echo "Installing screen"
+apt-get -y install screen
+
 #Install mqtt
 echo " "
 echo " "
