@@ -26,9 +26,9 @@ echo " "
 echo " "
 echo " "
 echo "Installing mosquitto"
-apt-get install mosquitto
-apt-get install mosquitto-clients
-apt-get install python-pip
+apt-get -y install mosquitto
+apt-get -y install mosquitto-clients
+apt-get -y install python-pip
 pip install mosquitto 
 
 #Install ipython
@@ -36,7 +36,7 @@ echo " "
 echo " "
 echo " "
 echo "Installing iPython"
-apt-get install ipython-notebook
+apt-get -y install ipython-notebook
 
 echo " "
 echo " "
