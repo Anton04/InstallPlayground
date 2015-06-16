@@ -1,0 +1,20 @@
+--- 10-mqtt.js	2015-06-16 23:19:07.494060801 +0200
++++ 10-mqtt.js	2015-06-16 23:24:31.950072355 +0200
+@@ -38,6 +38,7 @@
+ 
+     function MQTTInNode(n) {
+         RED.nodes.createNode(this,n);
++	this.name = n.name;
+         this.topic = n.topic;
+         this.broker = n.broker;
+         this.brokerConfig = RED.nodes.getNode(this.broker);
+@@ -52,6 +53,9 @@
+                     if ((node.brokerConfig.broker === "localhost")||(node.brokerConfig.broker === "127.0.0.1")) {
+                         msg._topic = topic;
+                     }
++		
++		    msg._name = node.name;
++
+                     node.send(msg);
+                 });
+                 this.client.on("connectionlost",function() {
