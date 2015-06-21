@@ -74,8 +74,8 @@ SERVICENAME=" ${0##*/} "
      ##sleep 10
      ##as_user "screen -p 0 -S minecraft -X eval 'stuff \"stop\"\015'"
      ##sleep 7
-     pkill -u iot -f $SERVICENAME
-     sleep 7
+     pkill -u iot -f "$SERVICENAME"
+     sleep 3
    else
      echo "$SERVICENAME was not running."
    fi
