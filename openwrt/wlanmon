@@ -1,0 +1,47 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2006 OpenWrt.org
+START=59
+
+LD_LIBRARY_PATH='/opt/lib:/opt/usr/lib'
+PATH='/bin:/sbin:/usr/bin:/usr/sbin:/opt/bin:/opt/sbin:/opt/usr/bin:/opt/usr/sb$
+
+SERVICE='wlanmonitor'
+ARGUMENTS=''
+
+PIDFILE=/var/run/${SERVICE}.pid
+SERVICENAME="wlanmon"
+HISTORY=512
+INVOCATION="$SERVICE $ARGUMENTS"
+
+start () {
+
+        SERVICEPID=$(pgrep $SERVICE)
+
+
+        if [ "$SERVICEPID" != "" ]
+        then
+                echo "$SERVICE service is running with PID: $SERVICEPID"
+        else
+                echo "Starting $SERVICE now..."
+                screen -h $HISTORY -dmS $SERVICENAME $INVOCATION
+                echo "Writinig pid to $PIDFILE"
+                pgrep $SERVICE > ${PIDFILE}
+        fi
+
+}
+
+
+
+stop() {
+
+        if [ -f ${PIDFILE} ]
+        then
+                echo "Removing pid file $PIDFILE"
+                rm ${PIDFILE}
+        else
+                echo "No pid file found!"
+        fi
+
+        echo "Killing service"
+        killall -9 $SERVICE
+}
