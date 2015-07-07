@@ -6,3 +6,16 @@ sudo apt-get install build-essential python-dev python-rpi.gpio
 
 sudo npm install -g --unsafe-perm  node-red
 
+NODE_RED_PATH=$HOME/node_modules/node-red
+
+ln -s $NODE_RED_PATH node-red
+
+cd $NODE_RED_PATH
+
+cd $NODE_RED_PATH && npm install node-red-node-xmpp
+cd $NODE_RED_PATH && npm install node-red-node-web-nodes
+cd $NODE_RED_PATH && npm install node-red-contrib-googlechart
+cd $NODE_RED_PATH && npm install node-red-contrib-slack
+cd $NODE_RED_PATH && npm install node-red-node-suncalc
+cd $NODE_RED_PATH && npm install node-red-contrib-freeboard
+
