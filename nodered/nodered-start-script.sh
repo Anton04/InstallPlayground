@@ -31,8 +31,8 @@ fi
 USERNAME='iot'
 APP_PATH="/home/$USERNAME/node_modules/node-red"
 HISTORY=1024
-NODE_VERSION="0.10.37"
-NODE="/home/$USERNAME/.nvm/v$NODE_VERSION/bin/node"
+NODE_VERSION="0.12.7"
+NODE="/home/$USERNAME/.nvm/versions/node/v$NODE_VERSION/bin/node"
 INVOCATION="$NODE $OPTIONS $SERVICE" 
 ME=`whoami`
 SERVICENAME=" ${0##*/} "
