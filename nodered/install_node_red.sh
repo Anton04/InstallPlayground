@@ -36,6 +36,7 @@ cd $NODE_RED_PATH && npm install node-red-contrib-freeboard
 
 #Set up flows 
 echo "Copying open playground flow library"
+mkdir -p $HOME/.node-red/lib 
 wget -qO- http://op-en.se/lib/flow_lib.tar.gz | tar xvz -C $HOME/.node-red/lib
 
 
