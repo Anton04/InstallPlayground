@@ -5,7 +5,7 @@ node_version='0.12.27'
 
 
 #Install node 
-wget -qO- https://raw.githubusercontent.com/Anton04/OpenEnergyPlayground/nodered/node_install.sh | bash
+wget -qO- https://raw.githubusercontent.com/Anton04/OpenEnergyPlayground/master/nodered/node_install.sh | bash
 
 . ~/.nvm/nvm.sh
 
