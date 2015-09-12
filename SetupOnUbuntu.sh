@@ -7,8 +7,8 @@ if [ "$(whoami)" != "root" ]; then
 fi
 
 echo "Installing git"
-apt-get update > /dev/null 
-apt-get install git > "/dev/null"
+apt-get update > /dev/null < /dev/null
+apt-get install git > /dev/null < /dev/null
 
 echo "Creating IoT user"
 
@@ -27,24 +27,24 @@ echo " "
 echo " "
 echo " "
 echo "Installing screen"
-apt-get -y install screen > "/dev/null"
+apt-get -y install screen > /dev/null < /dev/null
 
 #Install mqtt
 echo " "
 echo " "
 echo " "
 echo "Installing mosquitto"
-apt-get -y install mosquitto > "/dev/null"
-apt-get -y install mosquitto-clients > "/dev/null"
-apt-get -y install python-pip > "/dev/null"	
-pip install mosquitto > "/dev/null"
+apt-get -y install mosquitto > /dev/null < /dev/null
+apt-get -y install mosquitto-clients > /dev/null < /dev/null
+apt-get -y install python-pip > /dev/null < /dev/null	
+pip install mosquitto > /dev/null < /dev/null
 
 #Install ipython
 echo " "
 echo " "
 echo " "
 echo "Installing iPython"
-apt-get -y install ipython-notebook > "/dev/null"
+apt-get -y install ipython-notebook > /dev/null < /dev/null
 
 echo " "
 echo " "
