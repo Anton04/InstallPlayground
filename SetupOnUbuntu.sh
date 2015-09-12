@@ -93,7 +93,12 @@ dpkg -i influxdb_latest_amd64.deb > /dev/null
 
 echo " "
 echo " "
-echo " "
+echo "Installing grafana"
+wget https://grafanarel.s3.amazonaws.com/builds/grafana_2.1.3_amd64.deb
+apt-get install -y adduser libfontconfig > /dev/null < /dev/null
+dpkg -i grafana_2.1.3_amd64.deb > /dev/null < /dev/null
+echo "  "
+
 echo "DONE!"
 
 
