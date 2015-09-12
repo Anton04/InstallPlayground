@@ -37,8 +37,8 @@ adduser iot --disabled-password --gecos "Internet of things services and applica
 
 #cd ~
 #echo "Installing git"
-#apt-get update > /dev/null < /dev/null
-#apt-get install git > /dev/null < /dev/null
+apt-get update > /dev/null < /dev/null
+apt-get install -y git python-software-properties python g++ make > /dev/null < /dev/null
 
 #sudo -H -u iot bash -c 'mkdir repos' > /dev/null
 #sudo -H -u iot bash -c 'cd repos && git clone https://github.com/Anton04/InstallPlayground.git'
