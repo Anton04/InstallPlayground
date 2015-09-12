@@ -87,6 +87,16 @@ echo " "
 echo " "
 echo " "
 
-echo "DONE!"
+echo "DONE! Starting new services..."
+
+service influxdb start
+service grafana-server start
+service nodered start
+
+firefox http://localhost:1880
+firefox http://localhost:3000
+firefox http://localhost:8083
+
+
 
 
