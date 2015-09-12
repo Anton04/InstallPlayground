@@ -9,6 +9,6 @@ if  [!-f ~/.nvm/nvm.sh ] ; then
 fi
 
 echo "Installing node version" $node_version
-nvm install $node_version
-nvm use $node_version
+nvm install $node_version > /dev/null 
+nvm use $node_version > /dev/null 
 
