@@ -29,7 +29,7 @@ if [ `cat /proc/meminfo |grep MemTotal | awk '{ print $2 }'` -lt $LIMIT ]
 fi
 
 USERNAME='iot'
-APP_PATH="/home/$USERNAME/node-red"
+APP_PATH="/home/$USERNAME/node_modules/node-red"
 HISTORY=1024
 NODE_VERSION="0.10.37"
 NODE="/home/$USERNAME/.nvm/v$NODE_VERSION/bin/node"
