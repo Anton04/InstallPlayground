@@ -1,6 +1,6 @@
 #!/bin/bash
 
-node_version='0.12.27'
+node_version='0.12.2'
 #red_version='0.10.6'
 
 
