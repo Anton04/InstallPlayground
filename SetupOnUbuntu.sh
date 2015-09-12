@@ -6,19 +6,40 @@ if [ "$(whoami)" != "root" ]; then
 	exit 1
 fi
 
+echo "#########################################################################################"
+echo "This script will install tools used in the Open Energy Playground into your Ubuntu OS"
+echo "The tools are:"
+echo "	NodeRED a graphical probraming language to route realtime data."
+echo "  Influxdb a timeseries database."
+echo "  iPython nodebook a webbased python development tool"
+echo "  Mosquitto an MQTT broaker and client tools"
+echo " "
+echo "The script will also install some tools to needed by the above installations such as:"
+echo "	Screen, pip, git nodejs"
+echo " "
+echo "  "
+echo "#########################################################################################"
+
+read -n1 -r -p "Press space to continue..." key
+
+if [ "$key" = ' ' ]; then
+    echo "Starting installation..."
+    echo " "
+fi
+
 echo "Installing git"
 apt-get update > /dev/null < /dev/null
 apt-get install git > /dev/null < /dev/null
 
 echo "Creating IoT user"
 
-adduser iot --disabled-password --gecos "Internet of things services and applications" 
+adduser iot --disabled-password --gecos "Internet of things services and applications" > /dev/null
 
 #sudo su iot
 
 #cd ~
 
-sudo -H -u iot bash -c 'mkdir repos'
+sudo -H -u iot bash -c 'mkdir repos' > /dev/null
 #sudo -H -u iot bash -c 'cd repos && git clone https://github.com/Anton04/InstallPlayground.git'
 
 
@@ -67,8 +88,8 @@ echo " "
 echo " "
 echo " "
 echo "Installing influxDB"
-wget https://s3.amazonaws.com/influxdb/influxdb_latest_amd64.deb
-dpkg -i influxdb_latest_amd64.deb
+wget https://s3.amazonaws.com/influxdb/influxdb_latest_amd64.deb > /dev/null
+dpkg -i influxdb_latest_amd64.deb > /dev/null
 
 echo " "
 echo " "
