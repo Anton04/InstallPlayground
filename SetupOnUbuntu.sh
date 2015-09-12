@@ -17,9 +17,9 @@ echo " "
 echo "The script will also install some tools to needed by the above installations such as:"
 echo "	Screen, pip, git nodejs"
 echo " "
-echo "  "
+echo "A user called iot will be created for the nodered installation."
 echo "#########################################################################################"
-
+echo " "
 read -n1 -r -p "Press space to continue..." key
 
 if [ "$key" = ' ' ]; then
@@ -27,9 +27,7 @@ if [ "$key" = ' ' ]; then
     echo " "
 fi
 
-echo "Installing git"
-apt-get update > /dev/null < /dev/null
-apt-get install git > /dev/null < /dev/null
+
 
 echo "Creating IoT user"
 
@@ -38,8 +36,11 @@ adduser iot --disabled-password --gecos "Internet of things services and applica
 #sudo su iot
 
 #cd ~
+#echo "Installing git"
+#apt-get update > /dev/null < /dev/null
+#apt-get install git > /dev/null < /dev/null
 
-sudo -H -u iot bash -c 'mkdir repos' > /dev/null
+#sudo -H -u iot bash -c 'mkdir repos' > /dev/null
 #sudo -H -u iot bash -c 'cd repos && git clone https://github.com/Anton04/InstallPlayground.git'
 
 
@@ -47,7 +48,7 @@ sudo -H -u iot bash -c 'mkdir repos' > /dev/null
 echo " "
 echo " "
 echo " "
-echo "Installing screen"
+#echo "Installing screen"
 apt-get -y install screen > /dev/null < /dev/null
 
 #Install mqtt
@@ -60,16 +61,7 @@ apt-get -y install mosquitto-clients > /dev/null < /dev/null
 apt-get -y install python-pip > /dev/null < /dev/null	
 pip install mosquitto > /dev/null < /dev/null
 
-#Install ipython
-echo " "
-echo " "
-echo " "
-echo "Installing iPython"
-apt-get -y install ipython-notebook > /dev/null < /dev/null
 
-echo " "
-echo " "
-echo " "
 #echo "Installing node.js"
 #sudo -H -u iot bash -c 'cd /home/iot && wget -qO- https://raw.githubusercontent.com/Anton04/InstallPlayground/master/nodered/node_install.sh | bash'
 
@@ -98,6 +90,16 @@ wget https://grafanarel.s3.amazonaws.com/builds/grafana_2.1.3_amd64.deb
 apt-get install -y adduser libfontconfig > /dev/null < /dev/null
 dpkg -i grafana_2.1.3_amd64.deb > /dev/null < /dev/null
 echo "  "
+#Install ipython
+echo " "
+echo " "
+echo " "
+echo "Installing iPython"
+apt-get -y install ipython-notebook > /dev/null < /dev/null
+
+echo " "
+echo " "
+echo " "
 
 echo "DONE!"
 
