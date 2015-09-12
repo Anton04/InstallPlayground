@@ -1,5 +1,5 @@
 #!/bin/bash
-node_version='0.12.27'
+node_version='0.12.7'
 
 #Check if node version manager is installed.
 if  [  ! -f ~/.nvm/nvm.sh ] ; then
