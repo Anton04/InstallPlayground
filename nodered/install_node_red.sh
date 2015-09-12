@@ -1,11 +1,11 @@
 #!/bin/bash
 
-node_version='0.10.37'
+node_version='0.12.27'
 #red_version='0.10.6'
 
 
-#Install node version manager
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash
+#Install node 
+wget -qO- https://raw.githubusercontent.com/Anton04/OpenEnergyPlayground/nodered/node_install.sh | bash
 
 . ~/.nvm/nvm.sh
 
@@ -13,15 +13,17 @@ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | 
 nvm install $node_version
 nvm use $node_version
 
-
+echo "Installing node-red through nodes packet manager (npm)"
 #Install node red
 npm install node-red
 
 NODE_RED_PATH=$HOME/node_modules/node-red
 
-ln -s $NODE_RED_PATH node-red
+#ln -s $NODE_RED_PATH node-red
 
 cd $NODE_RED_PATH
+
+echo "Installing additional node-red nodes through npm"
 
 cd $NODE_RED_PATH && npm install node-red-node-xmpp
 cd $NODE_RED_PATH && npm install node-red-node-web-nodes
