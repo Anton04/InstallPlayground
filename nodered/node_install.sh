@@ -7,7 +7,7 @@ if  [  ! -f ~/.nvm/nvm.sh ] ; then
   wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
 fi
 
-. ~/.nvm/nvm.sh
+. $HOME/.nvm/nvm.sh
 echo "Installing node version" $node_version
 nvm install $node_version > /dev/null 
 nvm use $node_version > /dev/null 
