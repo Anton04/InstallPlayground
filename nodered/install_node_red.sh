@@ -32,11 +32,12 @@ cd $NODE_RED_PATH && npm install node-red-contrib-freeboard
 
 
 
-#Set up directory for saving flows 
-#mkdir /home/iot/flows
-cp /home/iot/repos/InstallPlayground/nodered/lib/ $HOME/.node-red/ -r
+#Set up flows 
+echo "Copying open playground flow library"
+wget -qO- http://op-en.se/lib/flow_lib.tar.gz | tar xvz -C $HOME/.node-red/lib
+
 
 #Just to make tings easier
-ln -s $HOME/.node-red/ $HOME/flows
+#ln -s $HOME/.node-red/ $HOME/flows
 
 
