@@ -93,9 +93,11 @@ service influxdb start
 service grafana-server start
 service nodered start
 
-firefox http://localhost:1880
-firefox http://localhost:3000
-firefox http://localhost:8083
+echo "Node red avalible at: http://localhost:1880"
+echo "Grafana avalible at: http://localhost:3000 dafault login admin/admin"
+echo "InfluxDB web interface avalible at: http://localhost:8083 default login root/root"
+
+#End
 
 
 
