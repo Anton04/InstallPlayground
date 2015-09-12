@@ -7,8 +7,8 @@ if [ "$(whoami)" != "root" ]; then
 fi
 
 echo "Installing git"
-apt-get update > /dev/null
-apt-get install git
+apt-get update > /dev/null 
+apt-get install git > "/dev/null"
 
 echo "Creating IoT user"
 
@@ -27,30 +27,30 @@ echo " "
 echo " "
 echo " "
 echo "Installing screen"
-apt-get -y install screen
+apt-get -y install screen > "/dev/null"
 
 #Install mqtt
 echo " "
 echo " "
 echo " "
 echo "Installing mosquitto"
-apt-get -y install mosquitto
-apt-get -y install mosquitto-clients
-apt-get -y install python-pip
-pip install mosquitto 
+apt-get -y install mosquitto > "/dev/null"
+apt-get -y install mosquitto-clients > "/dev/null"
+apt-get -y install python-pip > "/dev/null"	
+pip install mosquitto > "/dev/null"
 
 #Install ipython
 echo " "
 echo " "
 echo " "
 echo "Installing iPython"
-apt-get -y install ipython-notebook
+apt-get -y install ipython-notebook > "/dev/null"
 
 echo " "
 echo " "
 echo " "
-echo "Installing node.js"
-sudo -H -u iot bash -c 'cd /home/iot && wget -qO- https://raw.githubusercontent.com/Anton04/InstallPlayground/master/nodered/node_install.sh | bash'
+#echo "Installing node.js"
+#sudo -H -u iot bash -c 'cd /home/iot && wget -qO- https://raw.githubusercontent.com/Anton04/InstallPlayground/master/nodered/node_install.sh | bash'
 
 #Install nodered
 echo " "
