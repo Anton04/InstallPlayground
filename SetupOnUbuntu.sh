@@ -83,6 +83,7 @@ dpkg -i grafana_2.1.3_amd64.deb > /dev/null < /dev/null
 
 echo "Installing iPython"
 apt-get -y install ipython-notebook > /dev/null < /dev/null
+pip install mpld3
 
 echo " "
 echo " "
