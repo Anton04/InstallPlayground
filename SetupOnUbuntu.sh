@@ -68,6 +68,11 @@ sudo -H -u iot bash -c 'cd /home/iot && wget -qO- https://raw.githubusercontent.
 #Install startup script for nodered
 wget -qO- https://raw.githubusercontent.com/Anton04/InstallPlayground/master/nodered/install-node-red-start-script | bash
 
+
+#Install Appserver
+sudo -H -u iot bash -c 'cd /home/iot && wget -qO- https://raw.githubusercontent.com/Anton04/AppServer/master/install.sh | bash'
+
+
 # Install influxdb 
 echo "Installing influxDB"
 wget https://s3.amazonaws.com/influxdb/influxdb_latest_amd64.deb > /dev/null
@@ -100,6 +105,7 @@ echo "Grafana avalible at: http://localhost:3000 dafault login admin/admin"
 echo "InfluxDB web interface avalible at: http://localhost:8083 default login root/root"
 
 #End
+
 
 
 
