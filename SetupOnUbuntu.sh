@@ -72,6 +72,8 @@ wget -qO- https://raw.githubusercontent.com/Anton04/InstallPlayground/master/nod
 #Install Appserver
 sudo -H -u iot bash -c 'cd /home/iot && wget -qO- https://raw.githubusercontent.com/Anton04/AppServer/master/install.sh | bash'
 
+#Install startup script for AppServer
+cd /home/iot/repos/AppServer && wget -qO- https://raw.githubusercontent.com/Anton04/AppServer/master/install_startupscript.sh | bash
 
 # Install influxdb 
 echo "Installing influxDB"
