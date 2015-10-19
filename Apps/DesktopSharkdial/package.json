@@ -1,0 +1,22 @@
+
+{
+  "name": "DesktopDial",
+  "version": "0.0.1",
+  "description": "Demo to show",
+  "main": "index.html",
+
+  "window": {
+    "icon": "Sharkdial.icns",
+    "toolbar": false,
+    "frame":false,
+    "transparent":true,
+    "width":300,
+    "height":300
+
+  },
+  "scripts": {
+    "test": "echo \"Hello\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
