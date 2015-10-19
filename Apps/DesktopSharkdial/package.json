@@ -11,7 +11,8 @@
     "frame":false,
     "transparent":true,
     "width":300,
-    "height":300
+    "height":300,
+    "title":"   "
 
   },
   "scripts": {
