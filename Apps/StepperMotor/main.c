@@ -36,11 +36,10 @@ void step(bool direction)
 		pins[i] = pattern[counter][i];
 	}
 
-
 }
 
 void timer_loop()
 {
-
+	
 }
 
